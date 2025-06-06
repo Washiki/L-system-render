@@ -1,0 +1,91 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+	margin-left: 3px;
+	padding: 0;
+	font-family: 'Inter', sans-serif;
+	color: #212529;
+}
+
+
+textarea {
+	border: none;
+	outline: none;
+	background-color: wheat;
+	font-family: 'Inter', sans-serif;
+	height : 5em;
+	width: 16em;
+	padding: 0.5em;
+	resize: none; /* The resize grabber is controlled by css. cool*/	
+
+}
+
+.cert{
+	display:flex;
+	align-items: center;
+}
+
+.cert h4 {
+	margin-top: 0.5em;
+}
+
+h4{
+	margin-left:0.5em;
+	margin-bottom: 0.2em;
+}
+
+input[type = "number"],input[type = "text"]{
+	border: none;
+	outline: none;
+	height: 1em;
+	width: 100%;
+	padding-left: 0.5em;
+	margin-top: 0.5em;
+	background-color: wheat;
+	font-family: 'Inter', sans-serif;
+}
+
+#m1{
+	display:flex;
+	width: 100vh;
+
+}
+
+button{
+	outline : none;
+	background-color: #c1d3fe;
+	border: none;
+	padding: 20 20 20 20;
+
+}
+
+/*vertical displays*/
+@media (max-aspect-ratio: 4/5){
+	#m1{
+		flex-direction: column;
+		width: 100%;
+	}
+	
+	textarea{
+		width: 100%;
+	}
+	
+	input[type = "number"],input[type = "text"]{
+		width: 100%;
+	}
+	
+	button{
+		width: 100%;
+	}
+	
+	.cert{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	h4{
+		margin-left: 0;
+	}
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lindenmayer System Renderer</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.js"></script>
+  <script src="sketch2.js" defer type = "module" ></script>
+</head>
+
+<body>
+	<h1 id = "heading">Lindenmayer System Renderer</h1>
+
+	<div id="m1">
+		<div id = "Rules" style = "width: 16em;">
+			<h4>Rules:</h4>
+			<textarea id="rules">F=F+F-F-F+F</textarea>
+
+			<h4>Axiom:</h4>
+			<textarea id="axiom" style="height:1.3em;">F</textarea>
+
+			<div class = "cert">
+				<h4>Angle:</h4>
+				<input type="number" id="angle" value="90">
+			</div>
+
+			<div class = "cert">
+				<h4>Iterations:</h4>
+				<input type="number" id="iter" value="4">
+			</div>
+
+			<div class = "cert">
+				<h4>Start Coord:</h4>
+				<input type = "text" id = "start" value = "0,0" style = "width:100%;";>
+			</div>
+
+			<div class ="cert">
+				<h4>Length:</h4>
+				<input type="number" id="len" value="5">
+			</div>
+
+			<h4>Length Scale factor:</h4>
+			<input type="number" id="lsf" value="1">
+
+			<h4>Constants:</h4>
+			<p>
+			<code>
+				F : Draw Forward <br>
+				G : Move Foward without drawing<br>
+				[ : Save State <br>
+				] : Restore State <br>	
+				&gt : Increase Length by factor <br>
+				&lt : Decrease Length by factor <br>
+				+ : Anti Clockwise Turn<br>
+				- : Clockwise Turn<br>
+			</code>
+			</p>
+
+
+			<button id="regen">Generate!</button>
+			<button id="saver">Save Image</button>
+		</div>
+
+
+		<div id="draw-area">
+		</div>
+	</div>
+
+</body>
+</html>
+
